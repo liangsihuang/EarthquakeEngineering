@@ -2,16 +2,15 @@ function [u,v,a]=NewmarkMethod(gamma,beta,ga,fre,dr,dt)
 % 输入：算法参数gama, beta. 
 % gama=1/2, beta=1/4时是平均常加速度
 % gama=1/2, beta=1/6时是线性加速度
-% ，地面运动加速度向量ga，
+% 地面运动加速度向量ga，
 % 单质点体系的自振频率fre，阻尼比dr，计算时间间距dt
 % 输出：单质点体系的位移，速度，加速度反应向量
 
 p=-ga;
 nc=length(p);
-u=zeros(1,nc);
-v=zeros(1,nc);
-a=zeros(1,nc);
-
+u=zeros(nc,1);
+v=zeros(nc,1);
+a=zeros(nc,1);
 % 需要给定初位移和初速度
 u(1)=0;
 v(1)=0;
