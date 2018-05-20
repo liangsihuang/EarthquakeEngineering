@@ -31,12 +31,12 @@ k=[k1+k2 -k2 0 0 0 0 0 0;
 c=a0*m+a1*k;
 
 % 从文件导入地震动
-fileID=fopen('ELCENTRO.txt','r');
+fileID=fopen('RSN6_IMPVALL.I_I-ELC180.AT2','r');
 data=textscan(fileID,'%f','HeaderLines',4);
 fclose(fileID);
 data=cell2mat(data);
-ga=data/100;% gound acceleration,1 gal= 1/100 m/s^2
-dt=0.02;
+ga=data*9.8;
+dt=0.01;
 % 分解成各振型计算，计算广义坐标矩阵U，V，A。行：时程，列：不同振型
 m=length(ga);
 [n,~]=size(mode);
@@ -59,7 +59,7 @@ PlotStoreyDriftTimeSeries(mode,U,dt);
 j=8;
 PlotInterStoreyDriftTimeSeries(j,mode,U,dt);
 %% j层层间剪力时程
-j=2;
+j=1;
 kk=[k1 k2 k3 k4 k5 k6 k7 k8];
 PlotStoreyShearTimeSeries(j,mode,U,dt,kk);
 %% 各层层间位移绝对值最大值包络图

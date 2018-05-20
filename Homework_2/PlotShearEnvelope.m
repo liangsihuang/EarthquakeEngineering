@@ -13,4 +13,5 @@ plot(x,y);
 daspect([1 1e-4 1]);
 title('各层层间剪力绝对值最大值包络图');
 xlabel('剪力（N）');
+ylabel('层数')
 end

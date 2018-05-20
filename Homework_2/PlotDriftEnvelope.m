@@ -22,4 +22,6 @@ end
 plot(x,y);
 daspect([1 2000 1]);
 title('各层层间位移绝对值最大值包络图');
+xlabel('位移（m）');
+ylabel('层数')
 end
