@@ -22,7 +22,7 @@ for k=1:N
     Sx(k)=PowerSpectralDensity(w(k),wg,dg,wf,df);
 end
 for i=1:nt
-    g=IntensityEnvelope(t1,t2,c,t(i));
+    g=TimeIntensityFunction(t1,t2,c,t(i));
     for j=1:N
         S=g^2*Sx(j);
         A=sqrt(4*S*dw);
@@ -36,11 +36,15 @@ function Sx=PowerSpectralDensity(w,wg,dg,wf,df)
 % 根据Clough-Penzien模型
 numerator=wg^4+4*dg^2*wg^2*w^2;% 分子
 denominator=wg^2-w^2+4*dg^2*wg^2*w^2*(wf^2-w^2)+4*df^2*wf^2*w^2;% 分母
-S0=3; %谱强度因子，为什么取3？？？
+S0=SpectralIntensityFactor();
 Sx=numerator/denominator*S0;
+function S0=SpectralIntensityFactor()
+    %谱强度因子
+    S0=3;
+end
 end
 
-function g=IntensityEnvelope(t1,t2,c,t)
+function g=TimeIntensityFunction(t1,t2,c,t)
 if (t<=t1)
     g=(t/t1)^2;
 else if (t<=t2)
@@ -50,5 +54,7 @@ else if (t<=t2)
     end
 end
 end
+
+
 
 end
