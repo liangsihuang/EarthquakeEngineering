@@ -6,7 +6,7 @@
 
 
 
- B E G I N   A N A L Y S I S                                2016/12/01  00:04:45
+ B E G I N   A N A L Y S I S                                2016/12/01  05:27:01
 
 
  RUNNING ANALYSIS WITHIN THE GUI PROCESS
@@ -17,7 +17,7 @@
  NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =           3
  NUMBER OF LOAD PATTERNS                   =           2
  NUMBER OF ACCELERATION LOADS              =           9
- NUMBER OF LOAD CASES                      =           3
+ NUMBER OF LOAD CASES                      =           8
 
  ADDRESSABLE PHYSICAL MEMORY (RAM)         =       3.822 GB
 
@@ -31,16 +31,16 @@
  NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           2
 
 
- E L E M E N T   F O R M A T I O N                                      00:04:45
+ E L E M E N T   F O R M A T I O N                                      05:27:01
 
 
 
- L I N E A R   E Q U A T I O N   S O L U T I O N                        00:04:45
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        05:27:01
 
  FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
- TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =          12
- NUMBER OF NON-ZERO STIFFNESS TERMS        =          78
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =           6
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =          21
 
  ---------------------------------
  BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
@@ -52,7 +52,7 @@
  ---------------------------------
 
 
- L I N E A R   S T A T I C   C A S E S                                  00:04:45
+ L I N E A R   S T A T I C   C A S E S                                  05:27:01
 
  USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
@@ -65,18 +65,18 @@
  CASE: LIVE
 
 
- E I G E N   M O D A L   A N A L Y S I S                                00:04:45
+ E I G E N   M O D A L   A N A L Y S I S                                05:27:01
 
  CASE: MODAL
 
  USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
 
- NUMBER OF STIFFNESS DEGREES OF FREEDOM    =          12
- NUMBER OF MASS DEGREES OF FREEDOM         =           6
+ NUMBER OF STIFFNESS DEGREES OF FREEDOM    =           6
+ NUMBER OF MASS DEGREES OF FREEDOM         =           4
  MAXIMUM NUMBER OF EIGEN MODES SOUGHT      =          12
  MINIMUM NUMBER OF EIGEN MODES SOUGHT      =           1
  NUMBER OF RESIDUAL-MASS MODES SOUGHT      =           0
- NUMBER OF SUBSPACE VECTORS USED           =           6
+ NUMBER OF SUBSPACE VECTORS USED           =           4
  RELATIVE CONVERGENCE TOLERANCE            =    1.00E-09
 
  FREQUENCY SHIFT  (CENTER) (CYC/TIME)      =     .000000
@@ -91,19 +91,652 @@
  Original stiffness at shift : EV= 0.0000000E+00, f=     .000000, T=  -INFINITY-
  Number of eigenvalues below shift =      0
 
- Iteration    Approximations to next 5 eigenvalues, from shift EV= 0.0000000E+00
-       1   7.6618647E+01 7.6773071E+01 4.0547101E+02 3.6466860E+04 5.6727857E+04
+ Iteration    Approximations to next 4 eigenvalues, from shift EV= 0.0000000E+00
+       1   4.0547101E+02 3.6466860E+04 5.6727857E+04 5.6851798E+04
 
- Found mode      1 of      6:  EV= 7.6618647E+01, f=    1.393116, T=    0.717815
- Found mode      2 of      6:  EV= 7.6773071E+01, f=    1.394519, T=    0.717093
- Found mode      3 of      6:  EV= 4.0547101E+02, f=    3.204793, T=    0.312033
- Found mode      4 of      6:  EV= 3.6466860E+04, f=   30.392702, T=    0.032903
- Found mode      5 of      6:  EV= 5.6727857E+04, f=   37.906905, T=    0.026380
- Found mode      6 of      6:  EV= 5.6851798E+04, f=   37.948292, T=    0.026352
+ Found mode      1 of      4:  EV= 4.0547101E+02, f=    3.204793, T=    0.312033
+ Found mode      2 of      4:  EV= 3.6466860E+04, f=   30.392702, T=    0.032903
+ Found mode      3 of      4:  EV= 5.6727857E+04, f=   37.906905, T=    0.026380
+ Found mode      4 of      4:  EV= 5.6851798E+04, f=   37.948292, T=    0.026352
 
- NUMBER OF EIGEN MODES FOUND               =           6
+ NUMBER OF EIGEN MODES FOUND               =           4
  NUMBER OF ITERATIONS PERFORMED            =           1
  NUMBER OF STIFFNESS SHIFTS                =           0
 
 
- A N A L Y S I S   C O M P L E T E                          2016/12/01  00:04:45
+ L I N E A R   M O D A L   H I S T O R Y   A N A L Y S I S              05:27:01
+
+ CASE: MHIST1
+ ANALYSIS TYPE                             =      LINEAR
+ USING MODES FROM CASE: MODAL
+ NUMBER OF DYNAMIC MODES TO BE USED        =           4
+ NUMBER OF STATIC-LOAD MODES TO BE USED    =           1
+ MODES ARE TREATED AS STATIC BELOW PERIOD  =    1.0E-101
+
+ TOTAL HISTORY LENGTH (TIME)               =   10.000000
+ LENGTH OF TIME-STEPS (TIME)               =    0.100000
+ NUMBER OF TIME-STEPS TO BE INTEGRATED     =         100
+
+
+ EFFECTIVE MODAL DAMPING RATIOS (CROSS-COUPLING TERMS ARE NEGLECTED)
+       1    0.312033    0.020000
+       2    0.032903    0.020000
+       3    0.026380    0.020000
+       4    0.026352    0.020000
+   Time-step    Load-step     Sub-step    Iteration   Sub-steps/  Iterations/
+      number       number       number       number    load-step     sub-step
+
+           1            7            7            0            1            0
+           2           14           14            0            1            0
+           3           22           22            0            1            0
+           4           29           29            0            1            0
+           5           37           37            0            1            0
+           6           44           44            0            1            0
+           7           51           51            0            1            0
+           8           59           59            0            1            0
+           9           66           66            0            1            0
+          10           74           74            0            1            0
+          11           81           81            0            1            0
+          12           88           88            0            1            0
+          13           96           96            0            1            0
+          14          103          103            0            1            0
+          15          111          111            0            1            0
+          16          116          116            0            1            0
+          17          117          117            0            1            0
+          18          118          118            0            1            0
+          19          119          119            0            1            0
+          20          120          120            0            1            0
+          21          121          121            0            1            0
+          22          122          122            0            1            0
+          23          123          123            0            1            0
+          24          124          124            0            1            0
+          25          125          125            0            1            0
+          26          126          126            0            1            0
+          27          127          127            0            1            0
+          28          128          128            0            1            0
+          29          129          129            0            1            0
+          30          130          130            0            1            0
+          31          131          131            0            1            0
+          32          132          132            0            1            0
+          33          133          133            0            1            0
+          34          134          134            0            1            0
+          35          135          135            0            1            0
+          36          136          136            0            1            0
+          37          137          137            0            1            0
+          38          138          138            0            1            0
+          39          139          139            0            1            0
+          40          140          140            0            1            0
+          41          141          141            0            1            0
+          42          142          142            0            1            0
+          43          143          143            0            1            0
+          44          144          144            0            1            0
+          45          145          145            0            1            0
+          46          146          146            0            1            0
+          47          147          147            0            1            0
+          48          148          148            0            1            0
+          49          149          149            0            1            0
+          50          150          150            0            1            0
+          51          151          151            0            1            0
+          52          152          152            0            1            0
+          53          153          153            0            1            0
+          54          154          154            0            1            0
+          55          155          155            0            1            0
+          56          156          156            0            1            0
+          57          157          157            0            1            0
+          58          158          158            0            1            0
+          59          159          159            0            1            0
+          60          160          160            0            1            0
+          61          161          161            0            1            0
+          62          162          162            0            1            0
+          63          163          163            0            1            0
+          64          164          164            0            1            0
+          65          165          165            0            1            0
+          66          166          166            0            1            0
+          67          167          167            0            1            0
+          68          168          168            0            1            0
+          69          169          169            0            1            0
+          70          170          170            0            1            0
+          71          171          171            0            1            0
+          72          172          172            0            1            0
+          73          173          173            0            1            0
+          74          174          174            0            1            0
+          75          175          175            0            1            0
+          76          176          176            0            1            0
+          77          177          177            0            1            0
+          78          178          178            0            1            0
+          79          179          179            0            1            0
+          80          180          180            0            1            0
+          81          181          181            0            1            0
+          82          182          182            0            1            0
+          83          183          183            0            1            0
+          84          184          184            0            1            0
+          85          185          185            0            1            0
+          86          186          186            0            1            0
+          87          187          187            0            1            0
+          88          188          188            0            1            0
+          89          189          189            0            1            0
+          90          190          190            0            1            0
+          91          191          191            0            1            0
+          92          192          192            0            1            0
+          93          193          193            0            1            0
+          94          194          194            0            1            0
+          95          195          195            0            1            0
+          96          196          196            0            1            0
+          97          197          197            0            1            0
+          98          198          198            0            1            0
+          99          199          199            0            1            0
+         100          200          200            0            1            0
+
+ TOTAL NUMBER OF TIME-STEPS COMPLETED      =         100
+ TOTAL NUMBER OF LOAD-STEPS COMPLETED      =         200
+
+
+ L I N E A R   M O D A L   H I S T O R Y   A N A L Y S I S              05:27:01
+
+ CASE: MHIST0.25
+ ANALYSIS TYPE                             =      LINEAR
+ USING MODES FROM CASE: MODAL
+ NUMBER OF DYNAMIC MODES TO BE USED        =           4
+ NUMBER OF STATIC-LOAD MODES TO BE USED    =           1
+ MODES ARE TREATED AS STATIC BELOW PERIOD  =    1.0E-101
+
+ TOTAL HISTORY LENGTH (TIME)               =   10.000000
+ LENGTH OF TIME-STEPS (TIME)               =    0.100000
+ NUMBER OF TIME-STEPS TO BE INTEGRATED     =         100
+
+
+ EFFECTIVE MODAL DAMPING RATIOS (CROSS-COUPLING TERMS ARE NEGLECTED)
+       1    0.312033    0.020000
+       2    0.032903    0.020000
+       3    0.026380    0.020000
+       4    0.026352    0.020000
+   Time-step    Load-step     Sub-step    Iteration   Sub-steps/  Iterations/
+      number       number       number       number    load-step     sub-step
+
+           1            2            2            0            1            0
+           2            5            5            0            1            0
+           3            7            7            0            1            0
+           4           10           10            0            1            0
+           5           13           13            0            1            0
+           6           15           15            0            1            0
+           7           18           18            0            1            0
+           8           20           20            0            1            0
+           9           23           23            0            1            0
+          10           26           26            0            1            0
+          11           28           28            0            1            0
+          12           31           31            0            1            0
+          13           33           33            0            1            0
+          14           36           36            0            1            0
+          15           39           39            0            1            0
+          16           41           41            0            1            0
+          17           44           44            0            1            0
+          18           46           46            0            1            0
+          19           49           49            0            1            0
+          20           52           52            0            1            0
+          21           54           54            0            1            0
+          22           57           57            0            1            0
+          23           59           59            0            1            0
+          24           62           62            0            1            0
+          25           65           65            0            1            0
+          26           67           67            0            1            0
+          27           70           70            0            1            0
+          28           72           72            0            1            0
+          29           75           75            0            1            0
+          30           78           78            0            1            0
+          31           80           80            0            1            0
+          32           83           83            0            1            0
+          33           85           85            0            1            0
+          34           88           88            0            1            0
+          35           91           91            0            1            0
+          36           93           93            0            1            0
+          37           96           96            0            1            0
+          38           98           98            0            1            0
+          39          101          101            0            1            0
+          40          104          104            0            1            0
+          41          106          106            0            1            0
+          42          109          109            0            1            0
+          43          111          111            0            1            0
+          44          114          114            0            1            0
+          45          117          117            0            1            0
+          46          119          119            0            1            0
+          47          122          122            0            1            0
+          48          124          124            0            1            0
+          49          127          127            0            1            0
+          50          130          130            0            1            0
+          51          132          132            0            1            0
+          52          135          135            0            1            0
+          53          137          137            0            1            0
+          54          140          140            0            1            0
+          55          143          143            0            1            0
+          56          145          145            0            1            0
+          57          148          148            0            1            0
+          58          150          150            0            1            0
+          59          153          153            0            1            0
+          60          156          156            0            1            0
+          61          158          158            0            1            0
+          62          161          161            0            1            0
+          63          163          163            0            1            0
+          64          164          164            0            1            0
+          65          165          165            0            1            0
+          66          166          166            0            1            0
+          67          167          167            0            1            0
+          68          168          168            0            1            0
+          69          169          169            0            1            0
+          70          170          170            0            1            0
+          71          171          171            0            1            0
+          72          172          172            0            1            0
+          73          173          173            0            1            0
+          74          174          174            0            1            0
+          75          175          175            0            1            0
+          76          176          176            0            1            0
+          77          177          177            0            1            0
+          78          178          178            0            1            0
+          79          179          179            0            1            0
+          80          180          180            0            1            0
+          81          181          181            0            1            0
+          82          182          182            0            1            0
+          83          183          183            0            1            0
+          84          184          184            0            1            0
+          85          185          185            0            1            0
+          86          186          186            0            1            0
+          87          187          187            0            1            0
+          88          188          188            0            1            0
+          89          189          189            0            1            0
+          90          190          190            0            1            0
+          91          191          191            0            1            0
+          92          192          192            0            1            0
+          93          193          193            0            1            0
+          94          194          194            0            1            0
+          95          195          195            0            1            0
+          96          196          196            0            1            0
+          97          197          197            0            1            0
+          98          198          198            0            1            0
+          99          199          199            0            1            0
+         100          200          200            0            1            0
+
+ TOTAL NUMBER OF TIME-STEPS COMPLETED      =         100
+ TOTAL NUMBER OF LOAD-STEPS COMPLETED      =         200
+
+
+ L I N E A R   M O D A L   H I S T O R Y   A N A L Y S I S              05:27:01
+
+ CASE: MHIST0.5
+ ANALYSIS TYPE                             =      LINEAR
+ USING MODES FROM CASE: MODAL
+ NUMBER OF DYNAMIC MODES TO BE USED        =           4
+ NUMBER OF STATIC-LOAD MODES TO BE USED    =           1
+ MODES ARE TREATED AS STATIC BELOW PERIOD  =    1.0E-101
+
+ TOTAL HISTORY LENGTH (TIME)               =   10.000000
+ LENGTH OF TIME-STEPS (TIME)               =    0.100000
+ NUMBER OF TIME-STEPS TO BE INTEGRATED     =         100
+
+
+ EFFECTIVE MODAL DAMPING RATIOS (CROSS-COUPLING TERMS ARE NEGLECTED)
+       1    0.312033    0.020000
+       2    0.032903    0.020000
+       3    0.026380    0.020000
+       4    0.026352    0.020000
+   Time-step    Load-step     Sub-step    Iteration   Sub-steps/  Iterations/
+      number       number       number       number    load-step     sub-step
+
+           1            4            4            0            1            0
+           2            8            8            0            1            0
+           3           12           12            0            1            0
+           4           16           16            0            1            0
+           5           21           21            0            1            0
+           6           25           25            0            1            0
+           7           29           29            0            1            0
+           8           33           33            0            1            0
+           9           37           37            0            1            0
+          10           42           42            0            1            0
+          11           46           46            0            1            0
+          12           50           50            0            1            0
+          13           54           54            0            1            0
+          14           58           58            0            1            0
+          15           63           63            0            1            0
+          16           67           67            0            1            0
+          17           71           71            0            1            0
+          18           75           75            0            1            0
+          19           79           79            0            1            0
+          20           84           84            0            1            0
+          21           88           88            0            1            0
+          22           92           92            0            1            0
+          23           96           96            0            1            0
+          24          100          100            0            1            0
+          25          105          105            0            1            0
+          26          109          109            0            1            0
+          27          113          113            0            1            0
+          28          117          117            0            1            0
+          29          121          121            0            1            0
+          30          126          126            0            1            0
+          31          130          130            0            1            0
+          32          132          132            0            1            0
+          33          133          133            0            1            0
+          34          134          134            0            1            0
+          35          135          135            0            1            0
+          36          136          136            0            1            0
+          37          137          137            0            1            0
+          38          138          138            0            1            0
+          39          139          139            0            1            0
+          40          140          140            0            1            0
+          41          141          141            0            1            0
+          42          142          142            0            1            0
+          43          143          143            0            1            0
+          44          144          144            0            1            0
+          45          145          145            0            1            0
+          46          146          146            0            1            0
+          47          147          147            0            1            0
+          48          148          148            0            1            0
+          49          149          149            0            1            0
+          50          150          150            0            1            0
+          51          151          151            0            1            0
+          52          152          152            0            1            0
+          53          153          153            0            1            0
+          54          154          154            0            1            0
+          55          155          155            0            1            0
+          56          156          156            0            1            0
+          57          157          157            0            1            0
+          58          158          158            0            1            0
+          59          159          159            0            1            0
+          60          160          160            0            1            0
+          61          161          161            0            1            0
+          62          162          162            0            1            0
+          63          163          163            0            1            0
+          64          164          164            0            1            0
+          65          165          165            0            1            0
+          66          166          166            0            1            0
+          67          167          167            0            1            0
+          68          168          168            0            1            0
+          69          169          169            0            1            0
+          70          170          170            0            1            0
+          71          171          171            0            1            0
+          72          172          172            0            1            0
+          73          173          173            0            1            0
+          74          174          174            0            1            0
+          75          175          175            0            1            0
+          76          176          176            0            1            0
+          77          177          177            0            1            0
+          78          178          178            0            1            0
+          79          179          179            0            1            0
+          80          180          180            0            1            0
+          81          181          181            0            1            0
+          82          182          182            0            1            0
+          83          183          183            0            1            0
+          84          184          184            0            1            0
+          85          185          185            0            1            0
+          86          186          186            0            1            0
+          87          187          187            0            1            0
+          88          188          188            0            1            0
+          89          189          189            0            1            0
+          90          190          190            0            1            0
+          91          191          191            0            1            0
+          92          192          192            0            1            0
+          93          193          193            0            1            0
+          94          194          194            0            1            0
+          95          195          195            0            1            0
+          96          196          196            0            1            0
+          97          197          197            0            1            0
+          98          198          198            0            1            0
+          99          199          199            0            1            0
+         100          200          200            0            1            0
+
+ TOTAL NUMBER OF TIME-STEPS COMPLETED      =         100
+ TOTAL NUMBER OF LOAD-STEPS COMPLETED      =         200
+
+
+ L I N E A R   M O D A L   H I S T O R Y   A N A L Y S I S              05:27:02
+
+ CASE: MHIST1.5
+ ANALYSIS TYPE                             =      LINEAR
+ USING MODES FROM CASE: MODAL
+ NUMBER OF DYNAMIC MODES TO BE USED        =           4
+ NUMBER OF STATIC-LOAD MODES TO BE USED    =           1
+ MODES ARE TREATED AS STATIC BELOW PERIOD  =    1.0E-101
+
+ TOTAL HISTORY LENGTH (TIME)               =   10.000000
+ LENGTH OF TIME-STEPS (TIME)               =    0.100000
+ NUMBER OF TIME-STEPS TO BE INTEGRATED     =         100
+
+
+ EFFECTIVE MODAL DAMPING RATIOS (CROSS-COUPLING TERMS ARE NEGLECTED)
+       1    0.312033    0.020000
+       2    0.032903    0.020000
+       3    0.026380    0.020000
+       4    0.026352    0.020000
+   Time-step    Load-step     Sub-step    Iteration   Sub-steps/  Iterations/
+      number       number       number       number    load-step     sub-step
+
+           1           10           10            0            1            0
+           2           21           21            0            1            0
+           3           31           31            0            1            0
+           4           42           42            0            1            0
+           5           53           53            0            1            0
+           6           63           63            0            1            0
+           7           74           74            0            1            0
+           8           84           84            0            1            0
+           9           95           95            0            1            0
+          10          106          106            0            1            0
+          11          111          111            0            1            0
+          12          112          112            0            1            0
+          13          113          113            0            1            0
+          14          114          114            0            1            0
+          15          115          115            0            1            0
+          16          116          116            0            1            0
+          17          117          117            0            1            0
+          18          118          118            0            1            0
+          19          119          119            0            1            0
+          20          120          120            0            1            0
+          21          121          121            0            1            0
+          22          122          122            0            1            0
+          23          123          123            0            1            0
+          24          124          124            0            1            0
+          25          125          125            0            1            0
+          26          126          126            0            1            0
+          27          127          127            0            1            0
+          28          128          128            0            1            0
+          29          129          129            0            1            0
+          30          130          130            0            1            0
+          31          131          131            0            1            0
+          32          132          132            0            1            0
+          33          133          133            0            1            0
+          34          134          134            0            1            0
+          35          135          135            0            1            0
+          36          136          136            0            1            0
+          37          137          137            0            1            0
+          38          138          138            0            1            0
+          39          139          139            0            1            0
+          40          140          140            0            1            0
+          41          141          141            0            1            0
+          42          142          142            0            1            0
+          43          143          143            0            1            0
+          44          144          144            0            1            0
+          45          145          145            0            1            0
+          46          146          146            0            1            0
+          47          147          147            0            1            0
+          48          148          148            0            1            0
+          49          149          149            0            1            0
+          50          150          150            0            1            0
+          51          151          151            0            1            0
+          52          152          152            0            1            0
+          53          153          153            0            1            0
+          54          154          154            0            1            0
+          55          155          155            0            1            0
+          56          156          156            0            1            0
+          57          157          157            0            1            0
+          58          158          158            0            1            0
+          59          159          159            0            1            0
+          60          160          160            0            1            0
+          61          161          161            0            1            0
+          62          162          162            0            1            0
+          63          163          163            0            1            0
+          64          164          164            0            1            0
+          65          165          165            0            1            0
+          66          166          166            0            1            0
+          67          167          167            0            1            0
+          68          168          168            0            1            0
+          69          169          169            0            1            0
+          70          170          170            0            1            0
+          71          171          171            0            1            0
+          72          172          172            0            1            0
+          73          173          173            0            1            0
+          74          174          174            0            1            0
+          75          175          175            0            1            0
+          76          176          176            0            1            0
+          77          177          177            0            1            0
+          78          178          178            0            1            0
+          79          179          179            0            1            0
+          80          180          180            0            1            0
+          81          181          181            0            1            0
+          82          182          182            0            1            0
+          83          183          183            0            1            0
+          84          184          184            0            1            0
+          85          185          185            0            1            0
+          86          186          186            0            1            0
+          87          187          187            0            1            0
+          88          188          188            0            1            0
+          89          189          189            0            1            0
+          90          190          190            0            1            0
+          91          191          191            0            1            0
+          92          192          192            0            1            0
+          93          193          193            0            1            0
+          94          194          194            0            1            0
+          95          195          195            0            1            0
+          96          196          196            0            1            0
+          97          197          197            0            1            0
+          98          198          198            0            1            0
+          99          199          199            0            1            0
+         100          200          200            0            1            0
+
+ TOTAL NUMBER OF TIME-STEPS COMPLETED      =         100
+ TOTAL NUMBER OF LOAD-STEPS COMPLETED      =         200
+
+
+ L I N E A R   M O D A L   H I S T O R Y   A N A L Y S I S              05:27:02
+
+ CASE: MHIST2
+ ANALYSIS TYPE                             =      LINEAR
+ USING MODES FROM CASE: MODAL
+ NUMBER OF DYNAMIC MODES TO BE USED        =           4
+ NUMBER OF STATIC-LOAD MODES TO BE USED    =           1
+ MODES ARE TREATED AS STATIC BELOW PERIOD  =    1.0E-101
+
+ TOTAL HISTORY LENGTH (TIME)               =   10.000000
+ LENGTH OF TIME-STEPS (TIME)               =    0.100000
+ NUMBER OF TIME-STEPS TO BE INTEGRATED     =         100
+
+
+ EFFECTIVE MODAL DAMPING RATIOS (CROSS-COUPLING TERMS ARE NEGLECTED)
+       1    0.312033    0.020000
+       2    0.032903    0.020000
+       3    0.026380    0.020000
+       4    0.026352    0.020000
+   Time-step    Load-step     Sub-step    Iteration   Sub-steps/  Iterations/
+      number       number       number       number    load-step     sub-step
+
+           1           13           13            0            1            0
+           2           27           27            0            1            0
+           3           41           41            0            1            0
+           4           55           55            0            1            0
+           5           69           69            0            1            0
+           6           82           82            0            1            0
+           7           96           96            0            1            0
+           8          108          108            0            1            0
+           9          109          109            0            1            0
+          10          110          110            0            1            0
+          11          111          111            0            1            0
+          12          112          112            0            1            0
+          13          113          113            0            1            0
+          14          114          114            0            1            0
+          15          115          115            0            1            0
+          16          116          116            0            1            0
+          17          117          117            0            1            0
+          18          118          118            0            1            0
+          19          119          119            0            1            0
+          20          120          120            0            1            0
+          21          121          121            0            1            0
+          22          122          122            0            1            0
+          23          123          123            0            1            0
+          24          124          124            0            1            0
+          25          125          125            0            1            0
+          26          126          126            0            1            0
+          27          127          127            0            1            0
+          28          128          128            0            1            0
+          29          129          129            0            1            0
+          30          130          130            0            1            0
+          31          131          131            0            1            0
+          32          132          132            0            1            0
+          33          133          133            0            1            0
+          34          134          134            0            1            0
+          35          135          135            0            1            0
+          36          136          136            0            1            0
+          37          137          137            0            1            0
+          38          138          138            0            1            0
+          39          139          139            0            1            0
+          40          140          140            0            1            0
+          41          141          141            0            1            0
+          42          142          142            0            1            0
+          43          143          143            0            1            0
+          44          144          144            0            1            0
+          45          145          145            0            1            0
+          46          146          146            0            1            0
+          47          147          147            0            1            0
+          48          148          148            0            1            0
+          49          149          149            0            1            0
+          50          150          150            0            1            0
+          51          151          151            0            1            0
+          52          152          152            0            1            0
+          53          153          153            0            1            0
+          54          154          154            0            1            0
+          55          155          155            0            1            0
+          56          156          156            0            1            0
+          57          157          157            0            1            0
+          58          158          158            0            1            0
+          59          159          159            0            1            0
+          60          160          160            0            1            0
+          61          161          161            0            1            0
+          62          162          162            0            1            0
+          63          163          163            0            1            0
+          64          164          164            0            1            0
+          65          165          165            0            1            0
+          66          166          166            0            1            0
+          67          167          167            0            1            0
+          68          168          168            0            1            0
+          69          169          169            0            1            0
+          70          170          170            0            1            0
+          71          171          171            0            1            0
+          72          172          172            0            1            0
+          73          173          173            0            1            0
+          74          174          174            0            1            0
+          75          175          175            0            1            0
+          76          176          176            0            1            0
+          77          177          177            0            1            0
+          78          178          178            0            1            0
+          79          179          179            0            1            0
+          80          180          180            0            1            0
+          81          181          181            0            1            0
+          82          182          182            0            1            0
+          83          183          183            0            1            0
+          84          184          184            0            1            0
+          85          185          185            0            1            0
+          86          186          186            0            1            0
+          87          187          187            0            1            0
+          88          188          188            0            1            0
+          89          189          189            0            1            0
+          90          190          190            0            1            0
+          91          191          191            0            1            0
+          92          192          192            0            1            0
+          93          193          193            0            1            0
+          94          194          194            0            1            0
+          95          195          195            0            1            0
+          96          196          196            0            1            0
+          97          197          197            0            1            0
+          98          198          198            0            1            0
+          99          199          199            0            1            0
+         100          200          200            0            1            0
+
+ TOTAL NUMBER OF TIME-STEPS COMPLETED      =         100
+ TOTAL NUMBER OF LOAD-STEPS COMPLETED      =         200
+
+
+ A N A L Y S I S   C O M P L E T E                          2016/12/01  05:27:02

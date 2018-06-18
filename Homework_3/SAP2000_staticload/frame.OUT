@@ -13,6 +13,6 @@
 
   JOINTS              UX  UY  UZ  RX  RY  RZ
        1               -   -   -   -   -   -
-       2               A   A   A   A   A   A
+       2               A       A       A    
        3               -   -   -   -   -   -
-       4               A   A   A   A   A   A
+       4               A       A       A    
