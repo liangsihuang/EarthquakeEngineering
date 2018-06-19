@@ -30,29 +30,40 @@ element elasticBeamColumn 1 1 2 7680.0 2.0E+5 137.176E+6 1
 element elasticBeamColumn 2 2 3 4080.0 2.0E+5 61.456E+6 1
 element elasticBeamColumn 3 3 4 7680.0 2.0E+5 137.176E+6 1
 puts "recorder"
-recorder Node -file outputData/Node2disp.out -time -node 2 -dof 1 disp
-puts "mode and damping"
 set numModes 2
+for {set k 1} {$k <= $numModes} {incr k} {
+    recorder Node -file [format "modes/mode%i.out" $k] -nodeRange 1 4 -dof 1 2 3 "eigen $k"
+}
+
 set lambda [eigen  $numModes]
 set omega {}
+set f {}
+set T {}
+set pi 3.141593
 foreach lam $lambda {
     lappend omega [expr sqrt($lam)]
+    lappend f [expr sqrt($lam)/(2*$pi)]
+    lappend T [expr (2*$pi)/sqrt($lam)]
 }
-set w1 [lindex $lambda 0]
-set w2 [lindex $lambda 1]
-set dr 0.02
-set a0 [expr 2*$dr*$w1*$w2/($w1+$w2)]
-set a1 [expr 2*$dr/(($w1+$w2))]
-rayleigh $a0 $a1 0 0
-puts "load"
-timeSeries Path 1 -dt 0.1 -filePath data_sin1.txt -factor 9.8
-pattern UniformExcitation 1 1 -accel 1
-puts "analysis"
-constraints Transformation
-numberer Plain
-system UmfPack
-test EnergyIncr 1.0e-4 200
-algorithm Newton
-integrator Newmark 0.5 0.25
-analysis Transient
-analyze 100 0.1
+set period "modes/Periods.txt"
+set Periods [open $period "w"]
+foreach t $T {
+    puts $Periods "$t"
+}
+close $Periods
+record
+
+# 失败
+# recorder display "Mode Shape 1" 10 10 10000 10000 -wipe
+# prp [expr $l/2] [expr $h/2] 1;
+# vup  0  1 0;
+# vpn  0  0 1;
+# viewWindow -3500 3500 -3500 3500
+# display -1 5 20
+
+# recorder display "Mode Shape 2" 10 10010 10000 10000 -wipe
+# prp [expr $l/2] [expr $h/2] 1;
+# vup  0  1 0;
+# vpn  0  0 1;
+# viewWindow -3500 3500 -3500 3500
+# display -2 5 20
