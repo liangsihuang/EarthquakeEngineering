@@ -104,9 +104,9 @@ TABLE:  "FRAME SECTION ASSIGNMENTS"
  
 TABLE:  "FRAME SECTION PROPERTIES 01 - GENERAL"
    SectionName=beam   Material=Q345   Shape="I/Wide Flange"   t3=300   t2=120   tf=10   tw=6   t2b=120   tfb=10   Area=4080   TorsConst=95687.84   I33=61456000   I22=2885040   I23=0   AS2=1800   AS3=2000   S33=409706.666666667   S22=48084 _
-        Z33=465600   Z22=74520   R33=122.73037561272   R22=26.5916837951045   Color=Cyan   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1   Notes="Added 2016/12/1 0:01:42"
+        Z33=465600   Z22=74520   R33=122.73037561272   R22=26.5916837951045   Color=Cyan   FromFile=No   AMod=1   A2Mod=0   A3Mod=0   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1   Notes="Added 2016/12/1 0:01:42"
    SectionName=column   Material=Q345   Shape="I/Wide Flange"   t3=300   t2=300   tf=10   tw=6   t2b=300   tfb=10   Area=7680   TorsConst=215687.84   I33=137176000   I22=45005040   I23=0   AS2=1800   AS3=5000   S33=914506.666666667 _
-        S22=300033.6   Z33=987600   Z22=452520   R33=133.646767014146   R22=76.5508409490059   Color=Magenta   FromFile=No   AMod=1   A2Mod=1   A3Mod=1   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1   Notes="Added 2016/12/1 0:02:05"
+        S22=300033.6   Z33=987600   Z22=452520   R33=133.646767014146   R22=76.5508409490059   Color=Magenta   FromFile=No   AMod=1   A2Mod=0   A3Mod=0   JMod=1   I2Mod=1   I3Mod=1   MMod=1   WMod=1   Notes="Added 2016/12/1 0:02:05"
  
 TABLE:  "FRAME SECTION PROPERTIES 13 - TIME DEPENDENT"
    SectionName=beam   TypeSize=Auto   AutoSFSize=1

@@ -13,12 +13,14 @@ node 4 $l 0.0
 puts "mass"
 # 6.017 is joint mass from SAP2000
 # 5.905 is the manual calculated
-mass 1 0.109 0.109 0.0
+# mass 1 0.109 0.109 0.0
+mass 1 0.0 0.0 0.0
 # mass 2 5.905 5.905 0.0
 # mass 3 5.905 5.905 0.0
 mass 2 6.017 6.017 0.0
 mass 3 6.017 6.017 0.0
-mass 4 0.109 0.109 0.0
+mass 4 0.0 0.0 0.0
+# mass 4 0.109 0.109 0.0
 puts "node"
 fix 1 1 1 1
 fix 4 1 1 1
@@ -31,6 +33,8 @@ element elasticBeamColumn 2 2 3 4080.0 2.0E+5 61.456E+6 1
 element elasticBeamColumn 3 3 4 7680.0 2.0E+5 137.176E+6 1
 puts "recorder"
 set numModes 2
+# 最多只有两阶模态，没有梁轴向压缩的模态，对比SAP2000，自振周期偏小，说明结构偏刚
+# 即使sap2000令剪切面积为0，退化为欧拉梁，还是比Opensees的梁柔
 for {set k 1} {$k <= $numModes} {incr k} {
     recorder Node -file [format "modes/mode%i.out" $k] -nodeRange 1 4 -dof 1 2 3 "eigen $k"
 }
@@ -67,3 +71,5 @@ record
 # vpn  0  0 1;
 # viewWindow -3500 3500 -3500 3500
 # display -2 5 20
+
+# source frame_mode.tcl

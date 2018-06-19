@@ -31,6 +31,21 @@ element elasticBeamColumn 2 2 3 4080.0 2.0E+5 61.456E+6 1
 element elasticBeamColumn 3 3 4 7680.0 2.0E+5 137.176E+6 1
 puts "recorder"
 recorder Node -file outputData/Node2disp.out -time -node 2 -dof 1 disp
+# 竖向荷载
+# pattern Plain 1 Linear  {
+#     eleLoad -ele 2 -type -beamUniform -19
+#     # 没有考虑自重
+# }
+# constraints Plain
+# numberer Plain
+# system BandGeneral
+# test NormDispIncr 1.0e-8 6
+# algorithm Newton
+# integrator LoadControl 0.1
+# analysis Static
+# analyze 10
+# loadConst -time 0.0
+
 puts "mode and damping"
 set numModes 2
 set lambda [eigen  $numModes]
@@ -44,7 +59,10 @@ set dr 0.02
 set a0 [expr 2*$dr*$w1*$w2/($w1+$w2)]
 set a1 [expr 2*$dr/(($w1+$w2))]
 rayleigh $a0 $a1 0 0
+# rayleigh 0 [expr 2*$dr/$w1] 0 0
 puts "load"
+# set accelSeries "Series -dt 0.1 -filePath data_sin1.txt -factor 9.8"
+# pattern UniformExcitation 1 1 -accel $accelSeries
 timeSeries Path 1 -dt 0.1 -filePath data_sin1.txt -factor 9.8
 pattern UniformExcitation 1 1 -accel 1
 puts "analysis"
@@ -55,4 +73,6 @@ test EnergyIncr 1.0e-4 200
 algorithm Newton
 integrator Newmark 0.5 0.25
 analysis Transient
-analyze 100 0.1
+analyze 1000 0.01
+
+# source frame.tcl
