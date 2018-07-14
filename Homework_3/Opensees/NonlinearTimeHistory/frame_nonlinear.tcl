@@ -17,10 +17,12 @@ mass 1 0.109 0.109 0.0
 mass 2 6.017 6.017 0.0
 mass 3 6.017 6.017 0.0
 mass 4 0.109 0.109 0.0
+
 fix 1 1 1 1
 fix 4 1 1 1
 
 uniaxialMaterial Steel01 1 345 2e5 0.01
+
 source ISectionGenerator.tcl
 ISectionGenerator 300 120 6 10 0 0 1 1 5 3 L 10 10 False False
 ISectionGenerator 300 300 6 10 0 0 1 2 5 3 L 10 10 False False
